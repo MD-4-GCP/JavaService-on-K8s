@@ -1,0 +1,15 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ServiceStarter",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "de.dietzm.runsongcp.ServiceStarter",
+            "args": "",
+            "projectName": "blueblueapi"
+        }
+    ]
+}
