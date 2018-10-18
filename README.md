@@ -17,18 +17,18 @@ In order to run it on your own you at least need maven, docker and kubectl.
 ## How to build and run
 
 ### Maven Build 
-´mvn clean package´
-
+`mvn clean package`
+`
 ### Docker Build
-´docker build .´
+`docker build .`
 
 
 ## Troubleshooting
 
 After the maven build you can test the package with
-java -jar target/packaged-service-jar-with-dependencies.jar
-
-After the docker build you can test the container with 
-docker run -p 8080:8080 <created_container_id>
+`java -jar target/packaged-service-jar-with-dependencies.jar`
+`
+After the docker build you can test the container image with 
+`docker run -p 8080:8080 <created_image_id>`
 
 
