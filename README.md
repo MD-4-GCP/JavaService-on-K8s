@@ -18,7 +18,7 @@ In order to run it on your own you at least need maven, docker and kubectl.
 
 ### Maven Build 
 `mvn clean package`
-`
+
 ### Docker Build
 `docker build .`
 
@@ -26,9 +26,9 @@ In order to run it on your own you at least need maven, docker and kubectl.
 ## Troubleshooting
 
 After the maven build you can test the package with
-`java -jar target/packaged-service-jar-with-dependencies.jar`
-`
+```java -jar target/packaged-service-jar-with-dependencies.jar```
+
 After the docker build you can test the container image with 
-`docker run -p 8080:8080 <created_image_id>`
+```docker run -p 8080:8080 <created_image_id>```
 
 
