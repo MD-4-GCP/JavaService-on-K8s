@@ -1,5 +1,5 @@
-# JavaService-on-K8N
-This project contains a super Java service that can immediatly run on K8N / GKE. This can be used as a template for new microservices that should run on K8N.
+# JavaService-on-K8s
+This project contains a super Java service that can immediatly run on K8s / GKE. This can be used as a template for new microservices that should run on K8s.
 
 ## Used Libs, Frameworks, Tools
 I've used the following stuff to get this example up an running. 
