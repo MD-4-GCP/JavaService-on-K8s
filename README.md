@@ -22,15 +22,32 @@ In order to run it on your own you at least need maven, docker and kubectl.
 ### Docker Build
 `docker build .`
 
+### Image Taging and Pushing
+In order to push the image to GCP you have to tag it with a fully qualified name
+`docker tag <image-id> gcr.io/<gcp-project>/<give-it-name>`
+Afterwards you can push it
+`docker push gcr.io/<gcp-project>/<give-it-name>`
+
+### Run it on K8N
+`kubectl run <deployment_name> --image=gcr.io/<gcp-project>/<give-it-name>`
+`kubectl expose <deployment_name> --port=8080 --target-port=80`
 
 ## Troubleshooting
 
-After the maven build you can test the package with
+### Authentication 
+Use gcloud tools to help docker and kubectl with the right authentication
+Therefore you have to correctly initialize the gcloud command line tool, login and set the right project id. 
+Afterwards you can provision the authentication data into docker and kubectl
 
+```gcloud auth configure-docker```
+```gcloud container clusters get-credentials <cluster-name>```
+
+### Check the Builds
+After the maven build you can test the package with
 ```java -jar target/packaged-service-jar-with-dependencies.jar```
 
 After the docker build you can test the container image with 
-
 ```docker run -p 8080:8080 <created_image_id>```
+
 
 
