@@ -18,7 +18,7 @@ In order to run it on your own you at least need maven, docker and kubectl.
 
 ### Maven Build 
 `mvn clean package`
-
+ 
 ### Docker Build
 `docker build .`
 
